@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Inter";
+    src: url(../assets/fonts/Inter-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "Merri";
+    src: url(../assets/fonts/Merriweather-Light.ttf);
+}
+
+$white: rgb(240, 240, 240);
+$black: rgb(10, 10, 10);
+$color1: rgb(197, 197, 197);
+$color2: rgba(240, 240, 240, 0.5);
+
+@mixin centerChild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+    list-style: none;
+}
+
+p {
+    font-family: Merri;
+}
+
+a {
+    all: unset;
+}
+
+body {
+    background: url(../assets/images/bg.jpg) fixed center/cover;
+}

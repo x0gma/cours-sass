@@ -1,0 +1,29 @@
+header {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $white;
+
+    h1 {
+        max-width: 620px;
+        font-size: 4rem;
+        letter-spacing: 5px;
+        margin: 20px auto;
+    }
+
+    p {
+        font-style: italic;
+        margin: 20px auto;
+    }
+
+    i {
+        margin: 40px auto;
+        padding: 17px 20px;
+        font-size: 1.2rem;
+        border: 2px solid $white;
+        border-radius: 300px;
+    }
+}

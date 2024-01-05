@@ -1,0 +1,142 @@
+main {
+    width: 80vw;
+    margin: auto;
+}
+
+nav {
+    background: $color2;
+    color: $white;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+}
+
+.nav-left {
+    height: 100%;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+
+    ul {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    li {
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    li:hover {
+        background: $white;
+        color: $black;
+    }
+}
+
+.nav-right {
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    li {
+        padding: 0 30px;
+    }
+}
+.main-top {
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    :first-child {
+        margin: 80px auto;
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        letter-spacing: 5px;
+        max-width: 600px;
+    }
+
+    p {
+        max-width: 600px;
+        margin: 40px auto;
+        font-size: 1rem;
+        font-style: italic;
+        line-height: 2rem ;
+    }
+
+    .img-jump {
+        height: 50vh;
+        width: 80%;
+        background: url(../../assets/images/pic01.jpg) center/cover;
+    }
+
+    button {
+        margin: 50px auto;
+    }
+}
+
+.main-bot {
+    background: $white;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    .date {
+        margin: 50px auto 10px;
+        font-size: 0.8rem;
+    }
+    h3 {
+        letter-spacing: 2px;
+        max-width: 180px;
+        margin: 10px auto 20px;
+    }
+    img {
+        max-width: 80%;
+    }
+
+    p {
+        max-width: 80%;
+        margin: 30px auto;
+        text-align: start;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+
+    button {
+        margin-bottom: 60px;
+    }
+}
+
+.main-bot-left {
+    border-top: solid 1px $color1;
+    border-right: solid 1px $color1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-bot-right {
+    border-top: solid 1px $color1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

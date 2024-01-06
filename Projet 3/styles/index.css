@@ -15,6 +15,10 @@
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 p {
   font-family: Merri;
 }
@@ -25,6 +29,30 @@ a {
 
 body {
   background: url(../assets/images/bg.jpg) fixed center/cover;
+}
+body:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(10, 10, 10);
+  -webkit-animation: animBefore 1.5s ease forwards;
+          animation: animBefore 1.5s ease forwards;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  pointer-events: none;
+}
+@-webkit-keyframes animBefore {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes animBefore {
+  to {
+    opacity: 0;
+  }
 }
 
 button {
@@ -46,7 +74,7 @@ button:hover {
 }
 
 header {
-  height: 60vh;
+  height: 94vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,6 +90,25 @@ header {
           align-items: center;
   text-align: center;
   color: rgb(240, 240, 240);
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-animation: headerAnim 1.5s forwards;
+          animation: headerAnim 1.5s forwards;
+}
+@-webkit-keyframes headerAnim {
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes headerAnim {
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
+  }
 }
 header h1 {
   max-width: 620px;
@@ -69,9 +116,21 @@ header h1 {
   letter-spacing: 5px;
   margin: 20px auto;
 }
+@media screen and (max-width: 650px) {
+  header h1 {
+    font-size: 2.1rem;
+    max-width: 375px;
+  }
+}
 header p {
   font-style: italic;
   margin: 20px auto;
+  max-width: 650px;
+}
+@media screen and (max-width: 650px) {
+  header p {
+    max-width: 375px;
+  }
 }
 header i {
   margin: 40px auto;
@@ -82,7 +141,7 @@ header i {
 }
 
 main {
-  width: 80vw;
+  width: 80%;
   margin: auto;
 }
 
@@ -90,15 +149,26 @@ nav {
   background: rgba(240, 240, 240, 0.5);
   color: rgb(240, 240, 240);
   height: 70px;
-  display: grid;
-  grid-template-columns: 70% 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 100;
+}
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.nav-left {
   height: 100%;
+}
+nav .nav-left {
+  height: 100%;
+  width: 70%;
   font-size: 0.8rem;
   letter-spacing: 1px;
   display: -webkit-box;
@@ -108,7 +178,11 @@ nav {
       -ms-flex-align: center;
           align-items: center;
 }
-.nav-left ul {
+nav .nav-left:hover li:not(:hover) {
+  background: none;
+  color: rgb(240, 240, 240);
+}
+nav .nav-left ul {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -120,7 +194,7 @@ nav {
       -ms-flex-pack: start;
           justify-content: start;
 }
-.nav-left li {
+nav .nav-left li {
   height: 100%;
   padding: 0 20px;
   display: -webkit-box;
@@ -133,24 +207,59 @@ nav {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-.nav-left li:hover {
+@media screen and (max-width: 500px) {
+  nav .nav-left li {
+    font-size: 0.5rem;
+  }
+}
+nav .nav-left li:first-child {
   background: rgb(240, 240, 240);
   color: rgb(10, 10, 10);
 }
-
-.nav-right ul {
+nav .nav-left li:hover {
+  background: rgb(240, 240, 240);
+  color: rgb(10, 10, 10);
+}
+nav .nav-left li a {
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.nav-right li {
-  padding: 0 30px;
+nav .nav-right {
+  width: 33%;
+  margin-right: 10px;
+}
+@media screen and (max-width: 650px) {
+  nav .nav-right {
+    display: none;
+  }
+}
+nav .nav-right ul {
+  font-size: 1.1rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+nav .nav-right li {
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  cursor: pointer;
+}
+nav .nav-right li:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .main-top {
@@ -174,22 +283,57 @@ nav {
   margin: 80px auto;
   font-size: 1.2rem;
 }
-.main-top h2 {
-  font-size: 3rem;
-  letter-spacing: 5px;
-  max-width: 600px;
-}
 .main-top p {
   max-width: 600px;
   margin: 40px auto;
   font-size: 1rem;
   font-style: italic;
   line-height: 2rem;
+  position: relative;
+}
+@media screen and (max-width: 900px) {
+  .main-top p {
+    font-size: 0.8rem;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .main-top p {
+    font-size: 0.8rem;
+    max-width: 300px;
+  }
+}
+.main-top h2 {
+  font-size: 3rem;
+  letter-spacing: 5px;
+  max-width: 600px;
+}
+@media screen and (max-width: 900px) {
+  .main-top h2 {
+    font-size: 2rem;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .main-top h2 {
+    font-size: 1.5rem;
+    max-width: 300px;
+  }
 }
 .main-top .img-jump {
   height: 50vh;
   width: 80%;
   background: url(../../assets/images/pic01.jpg) center/cover;
+}
+@media screen and (max-width: 900px) {
+  .main-top .img-jump {
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 680px) {
+  .main-top .img-jump {
+    height: 20vh;
+  }
 }
 .main-top button {
   margin: 50px auto;
@@ -200,6 +344,11 @@ nav {
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+@media screen and (max-width: 680px) {
+  .main-bot {
+    grid-template-columns: 1fr;
+  }
 }
 .main-bot .date {
   margin: 50px auto 10px;
@@ -275,6 +424,11 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width: 750px) {
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
 
 .footer-left {
   display: -webkit-box;
@@ -305,7 +459,8 @@ footer {
   font-size: 0.6rem;
   letter-spacing: 1px;
 }
-.footer-left form input:not(:last-child), .footer-left form textarea {
+.footer-left form input:not(:last-child),
+.footer-left form textarea {
   background: none;
   border: 1px solid rgb(197, 197, 197);
   border-radius: 3px;
@@ -337,15 +492,21 @@ footer {
       -ms-flex-align: center;
           align-items: center;
 }
-.footer-right .list1 h4 {
+.footer-right h4 {
   padding-left: 20px;
   font-size: 0.8rem;
   letter-spacing: 1px;
 }
-.footer-right .list1 p {
-  font-size: 0.8rem;
+@media screen and (max-width: 750px) {
+  .footer-right h4 {
+    padding: 20px 0 20px 20px;
+  }
 }
-.footer-right .list1 .li1 {
+.footer-right p {
+  font-size: 0.8rem;
+  max-width: 80%;
+}
+.footer-right .li1 {
   height: 100%;
   display: grid;
   grid-template-columns: 30% 70%;
@@ -354,7 +515,7 @@ footer {
           align-items: center;
   border-bottom: 1px solid rgb(197, 197, 197);
 }
-.footer-right .list1 .li2 {
+.footer-right .li2 {
   height: 100%;
   display: grid;
   grid-template-columns: 30% 70%;
@@ -362,7 +523,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
 }
-.footer-right .list1 .li2 ul {
+.footer-right .li2 ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,7 +532,12 @@ footer {
           justify-content: space-between;
   max-width: 80%;
 }
-.footer-right .list1 .li2 ul li {
+@media screen and (max-width: 750px) {
+  .footer-right .li2 ul {
+    padding: 20px 0 20px 20px;
+  }
+}
+.footer-right .li2 ul li {
   min-width: 32px;
   padding: 5px 7px;
   border: 1px solid rgb(197, 197, 197);

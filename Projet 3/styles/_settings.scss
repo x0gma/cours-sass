@@ -28,6 +28,10 @@ $color3: rgb(87, 87, 87);
     list-style: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 p {
     font-family: Merri;
 }
@@ -38,4 +42,25 @@ a {
 
 body {
     background: url(../assets/images/bg.jpg) fixed center/cover;
+
+    &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: $black;
+        animation: animBefore 1.5s ease forwards;
+        animation-delay: 0.1s;
+        pointer-events: none;
+
+        @keyframes animBefore {
+            to {
+                opacity: 0;
+            }
+        }
+    }
+
 }
+

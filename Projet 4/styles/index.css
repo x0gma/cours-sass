@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "Allura";
+  src: url(../assets/fonts/Allura-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  list-style: none;
+}
+
+body {
+  background: rgb(32, 31, 31);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Poppins, sans-serif;
+}
+
+span {
+  font-family: Allura, serif;
+  color: rgb(165, 128, 8);
+}
+
+header {
+  background: url(../../assets/img/bg-slider-06.jpg) center/cover;
+  height: 70vh;
+  color: rgb(240, 240, 240);
+}
+header nav {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+header nav ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 10px 25px;
+  font-size: 0.8rem;
+}
+header nav ul span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+}
+header .main-header {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 190px;
+}
+header .main-header span {
+  font-size: 3.2rem;
+  max-height: 37px;
+}
+header .main-header h1 {
+  font-size: 4rem;
+  letter-spacing: 7px;
+}
+header .main-header img {
+  max-height: 35px;
+  margin: 20px 0 50px;
+}
+header .main-header h2 {
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,108 @@
+.main-mid {
+    .mm-top {
+        max-width: 70%;
+        margin: 75px auto;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 25% 75%;
+
+        .mmt-left {
+            background: $black1;
+            color: $white1;
+
+            .mmtl-container {
+                margin: 20px;
+                border: 1px dashed $color3;
+                padding: 20px;
+
+                span {
+                    font-size: 2rem;
+                }
+
+                img {
+                    margin: 30px auto;
+                }
+
+                h4 {
+                    color: $color2;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                    margin: 15px auto 30px;
+                }
+            }
+        }
+
+        .mmt-right {
+            background: $white1;
+
+            .mmtr-container {
+                height: 100%;
+                padding: 50px;
+
+                span {
+                    font-size: 2rem;
+                }
+
+                img {
+                    margin: 20px auto;
+                }
+
+                form {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr 1fr 1fr;
+                    grid-template-areas: 
+                    "ppl dat clk"
+                    "nam phn mal"
+                    "sub sub sub"
+                    ;
+                    justify-items: center;
+
+                    .infos{
+                        min-width: 90%;
+                        height: 60px;
+                        border-style: none;
+                        outline: none;
+                        appearance: none;
+                        background: none;
+                        border-bottom: 1px solid $color3;
+                    }    
+                }
+
+                #submit {
+                    grid-area: sub;
+                    appearance: none;
+                    border: none;
+                    background: $color1;
+                    color: $white1;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                    border-radius: 30px;
+                    padding: 15px 30px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }  
+    
+    .mm-mid {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: $white1;
+
+        span {
+            font-size: 2rem;
+        }
+        span:not(:first-child) {
+            margin: 30px auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+}

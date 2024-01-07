@@ -1,0 +1,87 @@
+.main-top {
+    position: relative;
+    height: 1050px;
+
+    .bg1 {
+        position: absolute;
+        background: url(../../assets/img/bg-menu-01.jpg) bottom no-repeat;
+        width: 100%;
+        height: 100%;
+        bottom:0;
+        z-index: -1;
+    }
+
+    .mt-top {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 50px auto 20px;
+        color: $white1;
+        max-width: 50%;
+
+        span {
+            font-size: 2rem;
+            margin: 20px auto;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            li {
+                padding-bottom: 10px;
+                border-bottom: 1px solid $color3;
+            }
+        }
+    }
+    .mt-main {
+        background: $white1;
+        margin: 20px auto;
+        border-top: 5px solid $color2;
+        z-index: 50;
+        max-width: 50%;
+
+        .mt-main-container {
+            padding: 30px 5px;
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0 20px;
+                    padding: 30px 0;
+                    border-bottom: 1px dashed $color3;
+
+                    .iandd {
+                        display: flex;
+                        div {
+                            padding: 10px;
+                            font-size: 1rem;
+
+                            h4 {
+                                font-weight: 300;
+
+                            }
+                        }
+                        img {
+                            max-height: 100px;
+                            border-radius: 300px;
+                        }                        
+                    }
+
+                    .price {
+                        color: $color2;
+                        font-size: 1rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

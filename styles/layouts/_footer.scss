@@ -1,0 +1,97 @@
+footer {
+    background: url(../../assets/img/bg-footer.jpg) center/cover no-repeat;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    @media screen and (max-width : 850px) {
+        background: $color1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        }
+
+
+
+    .footer-left {
+
+        @media screen and (max-width : 850px){
+            display: none;
+        }
+        .fl-container {
+            margin: 0 60px 0 100px;
+
+            span {
+                font-size: 2.5rem;
+            }
+
+            p {
+                color: $color3;
+                font-size: 1rem;
+                line-height: 30px;
+
+            }
+        }
+
+    }
+
+    .footer-right {
+        color: $white1;
+        
+        @media screen and (max-width : 850px){
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            height: 90%;
+            width: 80%;
+            max-height: none;
+
+        }
+        .fr-container {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            max-height: 70%;
+            align-items: center;
+            margin-left: 60px;
+
+            @media screen and (max-width : 850px) {
+                margin-left: 20px;
+            }
+
+            @media screen and (max-width : 850px) {
+                width: 100%;
+            }
+
+
+            .frc-top {
+                h3 {
+                    font-weight: 400;
+                }
+
+                input {
+                    background: none;
+                    color: $color3;
+                    outline: none;
+                    border: 1px solid rgb(63, 52, 39);
+                    padding: 5px 10px;
+                    margin-top: 10px;
+                }
+            }     
+            
+            .frc-bot {
+                display: flex;
+
+                ul {
+                    color: $color3;
+                    width: 40%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}

@@ -35,4 +35,14 @@
     .hf-right {
         background: url(../../assets/img/store-01.jpg) center/cover;
     }
+
+    @media screen and (max-width : 730px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .hf-right {
+            background: none;
+        }
+    }
 }

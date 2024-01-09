@@ -6,6 +6,28 @@
         display: grid;
         grid-template-columns: 25% 75%;
 
+        @media screen and (max-width : 1425px) {
+            max-width: 75%;
+        }
+
+        @media screen and (max-width : 1330px) {
+            max-width: 80%;
+        }
+
+        @media screen and (max-width : 1255px) {
+            max-width: 85%;
+        }
+
+        @media screen and (max-width : 1180px) {
+            grid-template-columns: 34% 66%;
+        }
+
+        @media screen and (max-width : 850px) {
+            display: flex;
+            flex-direction: column;
+            max-width: 85%;
+        }
+
         .mmt-left {
             background: $black1;
             color: $white1;
@@ -59,15 +81,29 @@
                     "sub sub sub"
                     ;
                     justify-items: center;
+                    align-items: center;
+
+                    @media screen and (max-width : 850px) {
+                        display: flex;
+                        flex-direction: column;
+                    }
 
                     .infos{
-                        min-width: 90%;
+
+                        width: 80%;
                         height: 60px;
                         border-style: none;
                         outline: none;
                         appearance: none;
                         background: none;
                         border-bottom: 1px solid $color3;
+
+                        @media screen and (max-width : 850px) {
+                            width: 70%;
+                        }
+                        @media screen and (max-width : 510px) {
+                            width: 90%;
+                        }
                     }    
                 }
 
@@ -82,6 +118,10 @@
                     border-radius: 30px;
                     padding: 15px 30px;
                     cursor: pointer;
+
+                    @media screen and (max-width : 850px) {
+                        margin-top: 40px;
+                    }
                 }
             }
         }
@@ -103,6 +143,244 @@
         h2 {
             font-size: 2rem;
         }
+
+        @media screen and (max-width : 850px) {
+            display: none;
+        }
     }
 
+    .mm-bot {
+        display: flex;
+        margin: 0 auto 100px;
+        width: 70vw;
+        max-width: 1000px;
+        @media screen and (max-width : 850px) {
+            display: none;
+        }
+
+        .mmb-left {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            
+            .mmbl-top {
+                display: flex;
+                margin: 0 15px 15px 0;
+                
+                .mmblt-left {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 180px;
+                    width: 230px;
+                    background: url(../../assets/img/event-01.jpg) center/cover;
+
+                    .square {
+                        position: relative;
+                        width: 80px; 
+                        height: 80px; 
+                        background-color: $color1;
+                        color: $white1;
+
+                        &::after {
+                            content: "08 July";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            text-align: center;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+                .mmblt-right {
+                    background: $white1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    width: 72%;
+                    padding: 10px;
+                    
+                    p{
+                        color: $color3;
+                        font-size: 0.8rem;
+                        letter-spacing: 1px;
+                    }
+
+
+                }
+            }
+
+            .mmbl-bot {
+                display: flex;
+                margin-right: 15px;
+
+                .mmblb-left {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 180px;
+                    width: 230px;
+                    background: url(../../assets/img/event-02.jpg) center/cover;
+
+                    .square {
+                        position: relative;
+                        width: 80px; 
+                        height: 80px; 
+                        background-color: $color1;
+                        color: $white1;
+
+                        &::after {
+                            content: "08 July";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            text-align: center;
+                            font-size: 1.5rem;
+                        }
+                    }
+
+
+                }
+                .mmblb-right {
+                    background: $white1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding: 10px;
+                    width: 72%;
+
+                    p{
+                        color: $color3;
+                        font-size: 0.8rem;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+            
+        }
+
+        .mmb-right {
+            width: 40%;
+            background: url(../../assets/img/event-03.jpg);
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        
+            .mmbr-container {
+                position: relative;
+                background: $white1;
+                height: 90%;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 60px;
+
+                .square {
+                    position: relative;
+                    width: 80px; 
+                    height: 80px; 
+                    background-color: $color1;
+                    color: $white1;
+
+                    &::after {
+                        content: "08 July";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                        font-size: 1.5rem;
+                    }
+                }
+
+                p {
+                    color: $color3;
+                    font-size: 0.8rem;
+                    letter-spacing: 1px;
+                    padding: 0 20px 30px;
+                }
+            }
+
+        }    
+    }
+
+    .mmb-bot {
+        position: relative;
+        display: flex;
+        height: 50vh;
+
+        .bg2 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 70%;
+            background: url(../../assets/img/gmap.jpg) center/cover no-repeat;
+
+            @media screen and (max-width : 520px) {
+                height: 50%;
+            }
+
+            @media screen and (max-width : 430px) {
+                height: 30%;
+            }
+        }
+
+        .mmbb-container {
+            position: relative;
+            height: 50%;
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: $white1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px;
+
+            @media screen and (max-width : 715px) {
+                height: 60%;
+            }
+
+            @media screen and (max-width : 520px) {
+                height: 70%;
+            }
+
+            @media screen and (max-width : 430px) {
+                height: 80%;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                transform: translateY(-50%);
+                height: 60px;
+                width: 60px;
+                border-radius: 300px;
+            }
+
+            p {
+                line-height: 30px;
+            }
+
+            h2 {
+                margin: 20px 0 10px;
+                font-family: $font1;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+
+            h4 {
+                font-family: $font1;
+                font-weight: 200;
+                color: $color2;
+            }
+        }
+    }
 }

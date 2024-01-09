@@ -1,0 +1,69 @@
+header {
+    background: url(../assets/img/bg-slider-06.jpg) center/cover;
+    height: 70vh;
+    color: $white1;
+    nav {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+
+        ul{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 10px 25px;
+            font-size: 0.8rem;
+
+
+            span {
+                font-size: 2rem;
+                font-weight: bold;
+                color: $white1;
+            }
+        }
+    } 
+    .tabs{
+        @media screen and (max-width : 730px) {
+            display: none;
+        }
+    }
+
+    .main-header {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: flex-start;
+        margin-top: 190px;
+
+        span {
+            font-size: 3.2rem;
+            max-height: 37px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            letter-spacing: 7px;
+
+            @media screen and (max-width : 440px) {
+                font-size: 3rem;
+            }
+        }
+
+        img {
+            max-height: 35px ;
+            margin: 20px 0 50px;
+        }
+
+        h2 {
+            font-family: $font1;
+            font-weight: 200;
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+        }
+    }
+}
